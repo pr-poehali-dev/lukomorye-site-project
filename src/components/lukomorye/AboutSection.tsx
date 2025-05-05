@@ -27,18 +27,18 @@ const AboutSection = () => {
   const features = [
     {
       icon: "Home",
-      title: "Комфортное размещение",
-      description: "Уютные домики различных категорий, оборудованные всем необходимым для комфортного отдыха"
+      title: "Уютные коттеджи",
+      description: "Деревянные коттеджи и летние домики различных категорий на берегу озера с потрясающим видом"
     },
     {
-      icon: "Utensils",
-      title: "Домашняя кухня",
-      description: "Ресторан с разнообразным меню из свежих и экологически чистых продуктов"
+      icon: "Flame",
+      title: "Отдых с комфортом",
+      description: "Все условия для комфортного отдыха: полностью оборудованные кухни, мангалы, беседки, парковка"
     },
     {
       icon: "Mountain",
       title: "Активный отдых",
-      description: "Разнообразные развлечения на воде и суше, походы, рыбалка и множество других активностей"
+      description: "Рыбалка, купание, прогулки по лесу, катание на лодках, настольный теннис и спортивные площадки"
     }
   ];
 
@@ -46,8 +46,8 @@ const AboutSection = () => {
     <section id="about" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Добро пожаловать в Лукоморье</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">Уютная база отдыха, где вы можете насладиться природой, чистым воздухом и комфортным проживанием</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">База отдыха в Псковской области</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">Лукоморье — уютный уголок природы на берегу озера Велье, где вы можете отдохнуть от городской суеты всей семьей или компанией друзей</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

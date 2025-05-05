@@ -3,11 +3,12 @@ import Icon from "@/components/ui/icon";
 
 interface SocialLinkProps {
   name: string;
+  url: string;
 }
 
-const SocialLink = ({ name }: SocialLinkProps) => {
+const SocialLink = ({ name, url }: SocialLinkProps) => {
   return (
-    <a href="#" className="hover:text-green-400">
+    <a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-green-400">
       <Icon name={name} className="h-6 w-6" />
     </a>
   );
@@ -43,19 +44,23 @@ const Footer = () => {
   const navLinks = [
     { href: "#", label: "Главная" },
     { href: "#about", label: "О нас" },
-    { href: "#gazebos", label: "Беседки" },
-    { href: "#bathhouse", label: "Баня" },
+    { href: "#cottages", label: "Коттеджи" },
+    { href: "#bathhouse", label: "Банный комплекс" },
     { href: "#activities", label: "Развлечения" },
     { href: "#contacts", label: "Контакты" }
   ];
 
   const contactInfo = [
-    { icon: "MapPin", text: "г. Сказочный, ул. Лесная, 123" },
-    { icon: "Phone", text: "+7 (123) 456-78-90" },
-    { icon: "Mail", text: "info@lukomorye.ru" }
+    { icon: "MapPin", text: "Псковская обл., д. Заозерье, оз. Велье" },
+    { icon: "Phone", text: "+7 (921) 210-80-55" },
+    { icon: "Mail", text: "lukorel@mail.ru" }
   ];
 
-  const socialLinks = ["Facebook", "Instagram", "Twitter", "Youtube"];
+  const socialLinks = [
+    { name: "MessageCircle", url: "https://vk.com/lukorel" },
+    { name: "Mail", url: "#" },
+    { name: "Image", url: "#" }
+  ];
 
   return (
     <footer className="bg-gray-800 text-white py-8">
@@ -63,10 +68,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
-              <Icon name="Trees" className="h-6 w-6 mr-2" />
+              <Icon name="Leaf" className="h-6 w-6 mr-2" />
               Лукоморье
             </h3>
-            <p className="text-gray-300">Лучшее место для отдыха вдали от городской суеты, среди красивой природы.</p>
+            <p className="text-gray-300">База отдыха в Псковской области на берегу озера Велье. Идеальное место для отдыха от городской суеты.</p>
           </div>
           
           <div>
@@ -89,7 +94,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Мы в соцсетях</h3>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
-                <SocialLink key={index} name={link} />
+                <SocialLink key={index} name={link.name} url={link.url} />
               ))}
             </div>
           </div>
